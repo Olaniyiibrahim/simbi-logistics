@@ -4,282 +4,194 @@
   padding: 0;
 }
 html{
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+
 body{
+  font-family: 'Courier New', Courier, monospace;
   line-height: 1.4;
 }
-header{
-  background-image: url('ALFA.jpg');
+a {
+  text-decoration: none;
+}
+p  {
+  margin: 0.75rem 0; 
+}
+
+/* utility */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden; 
+}
+
+.text-center{
+  text-align: center;
+ 
+}
+.text-primary{
+  color: #93cb32;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+.bg-primary {
+  background: #93cb52;
+  color: #fff;
+}
+.l-heading {
+  font-size: 3.9rem;
+  margin-bottom: 0.55rem;
+  line-height: 1.1;
+}
+.n-heading {
+  font-size: 2rem;
+  margin-bottom: 0.55rem;
+  line-height: 1.1;
+}
+.lead{
+  font-size: 1.3rem;
+  margin: bottom 2rem;
+}
+.py-1 { padding: 1.5rem;}
+.py-2 { padding: 4rem 0;}
+.py-3 { padding: 3rem 0;}
+  
+.p-1 { padding: 1.5rem;}
+.p-2 { padding: 2rem;}
+.p-3 { padding: 3rem;}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  background: #93cb52;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+}
+.btn:hover {
+  background: #77c825;
+}
+.btn-dark {
+  color:#fff;
+}
+.list {
+  margin: 0.5rem 0;
+  list-style-type: none;
+}
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: #444 dotted 1px;
+}
+/* Navbar */
+#navbar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: #333;
+  color: #fff;
+  justify-content: space-between;
+  z-index: 1; 
+  padding: 1rem;
+}
+#navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+#navbar ul li a {
+  color: #fff;
+  padding: 0.75rem; 
+  margin: 0.25rem;
+
+}
+
+#navbar ul li a:hover {
+  background:#93cb32 ;
+  border-radius: 5px; 
+}
+/* showcase */
+#showcase {
+  background-image: url('css/img/showcase.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* height: 400px; */
-  /* position: fixed; */
-}
-
-span{
-  color: aqua;
-}
-#bar{
-  display: flex;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  /* background-color: rgb(145, 145, 145); */
-  /* z-index: 1; */
-  backdrop-filter: blur(70px);
- 
+  height: 100vh;
+  color: #fff;
 } 
-#bar ul{
-  float: right;
-  justify-content: space-between;
-  /* margin-left:300px */
-}
-#bar ul li{
-   list-style: none;
-   padding: 20px;
-   display: inline;
-}
-#bar ul li a{
-  text-decoration: none;
-  color: rgb(27, 27, 27);
-}
-#bar ul li a:hover{
-  background-color: rgb(204, 180, 83);
-  border-radius: 5px;
-  color: blue ;
-}
-header .services{
-  padding-top: 90px; 
+
+#showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
-}
-header .services .bttn{
-  padding: 9px;
-  margin: 9px;
-}
-.bttn-sec{
-  margin-left: 90px;
-  display: flex;
-  padding: 5px;
-}
-header .services .btn, .btn{
-  background-color: blue;
-  color: white;
-  height: 30px;
-  width: 90px;
-  border-radius: 5px;
-  border: none;
-}
-header .services .btn-red, .btn-red{
-  border: none;
-  color: blue;
-  font-size: medium;
-  padding: 5px;
-}
-header .services i, .bttn-sec i {
-  border-radius: 50px;
-  border: 2px solid rgb(200, 223, 100);
-  padding: 2px;
-  
-}
-/* .fa-play-circle{
-  background: none !important;
-} */
-#container{
-  display: grid;
-  max-width: 960px;
-  margin: 30px auto;
-  padding: 5px;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
-  grid-auto-rows: 200px;
-  gap: 10px;
-}
-#container .service{
-  padding: 10px;
-  /* font-size: 20px; */
-  border-radius: 5px;
-}
-#container .service:nth-of-type(1){
-  grid-column: 1/ span 2;
-}
-#container .service:nth-of-type(2) {
- background-color: rgb(176, 233, 233);
- text-align: center;
-}
-#container .service:nth-of-type(3) {
-  background-color: rgb(247, 192, 201) ;
-  text-align: center;
-}
-#container .service:nth-of-type(4){
-  background-color: rgb(223, 231, 236);
-  text-align: center;
-}
-#container .service:nth-of-type(5){
-  background-color:rgb(247, 192, 201);
-  text-align: center;
-}
-#container .service:nth-of-type(6){
-  background-color: rgb(176, 233, 233);
-  text-align: center;
-  }
-#container .service:nth-of-type(7){
-  background-color: rgb(223, 231, 236);
-  text-align: center;
-}
-#Feature{
-  background-color: rgb(226, 247, 241);
-  /* max-width: 100%; */
-}
-#Feature  .feature{
-  text-align: center;
-  padding: 15px;
-  
-}
-#Feature  .feature .feature-mode {
-  background-color: rgb(253, 253, 253);
-  border-radius: 20px;
-  color: rgb(37, 37, 37);
-  width: 170px;
-  color: rgb(20, 20, 20);
-  text-align: center;
-  margin: auto;
-}
-#Feature  .feature h1{
-  font-size: xx-large;
-}
-#Feature .show-case {
-  display: grid;
-  max-width: 960px;
-  grid-template-columns: repeat(auto-fill,minmax(450px, 1fr));
-  margin: 20px auto;
-  padding: 5px;
-  /* grid-auto-rows: 370px; */
-  gap:10px;
-}
-#Feature .show-case .show{
-  background-color: white;
-  display: flex;
-  border-radius: 9px;
-  /* padding: 15px; */
-}
-#Feature .show-case .case{
-  background-color: white;
-  display: flex;
-  border-radius: 9px;
-  display: block;
-  padding: 15px;
-}
-#Feature .show-case .show .show-what{
-  display: block;
-  padding: 5px;
-}
-#Feature .show-case .show .show-what .show-me{
-  background-color: aquamarine;
-  width: 220px;
-  height: 170px;
-  border-radius: 7px;
-  margin-top: 10px;
   align-items: center;
-  justify-content: center;
+  height: 100vh;
+  padding: 0 2rem;
+  /* Overlay */
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
-#Feature .show-case .show .show-what  .show-us{
-  background-color: pink;
-  height: 150px;
-  width: 220px;
-  border-radius: 7px;
-  margin-top: 10px;
-}
-#Choose{
-  margin-top: 10px;
+
+/* SECTION:what We Do */
+#what .items {
   display: flex;
-  padding: 70px;
+  padding: 1rem;
 }
-#Choose h6{
-  background-color: rgb(201, 219, 235);
-  width: 130px;
-  height: 30px;
-  border-radius: 15px;
+
+#what .item {
+  flex: 1;
   text-align: center;
-  padding: 7px;
+  padding: 1rem;
 }
-#Choose .choose-choice{
-font-size: 13px;
-}
-#Testimonials{
-  background-color: rgb(182, 173, 173);
-  max-height: 100%;
+ /* Section  who are*/
+ #who {
+  display: flex;
+ }
+ #who div {
+  flex: 1;
+ }
+ #who .who-img {
+  background-image: url('css/img/people.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+ }
+ /* clients */
+ #clients .items {
+  display: flex;
+ }
+ #clients .items img {
   display: block;
-
-}
-#Testimonials .Testimonials-series{
-  padding-top: 15px;
-}
-#Testimonials .Testimonials-series .testim{
-  text-align: center;
-  color: rgb(3, 3, 3);
-}
-#Testimonials .simbi-testim{
-  display: grid;
-  max-width: 700px;
-  grid-template-columns: repeat(2,1fr);
-  margin: 10px auto;
-  padding: 10px;
-  gap: 30px;
-}
-#Testimonials .simbi-testim .red-testim{
- border-radius: 7px;
- background-color: white;
- padding: 9px;
-}
-#partners{
-  opacity: 0.9;
-  color: rgb(14, 13, 13);
-}
-#partners .partners-red{
-  text-align: center;
-}
-#partners .partners-red h5{
- background-color: rgb(206, 206, 197);
-width: 110px;
-border-radius: 9px;
-margin: auto;
-}
-#partners .add-logo{
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(90px, 1fr));
-  max-width: 960px;
-  margin: 15px auto;
-  grid-auto-rows: 70px ;
-  padding: 5px;
-  gap: 10px;
-  justify-content: center;
-}
-.logo{
-  background-color: aliceblue;
-  border-radius: 15px;
-  text-align: center;
-  padding: 19px;
-}
-#footer{
-  text-align: center;
-  background-color: rgb(192, 192, 192);
-
-}
-#footer .foooter-bin{
-  padding-top: 20px;
-}
-#footer .last-last{
-  /* display: flex; */
-  text-align: center;
-}
-@media (max-width: 360px){ 
- 
-}
-
-
-
-
-
-
+  margin: auto;
+  width: 60%;
+ }
+ /* section :contact */
+ #contact{
+  display: flex;
+ }
+ #contact .map, #contact .contact-form {
+  flex: 1;
+ }
+ #contact .contact-form .form-group {
+  margin: 0.75em; ;
+ }
+ #contact .contact-form label {
+  display: block;
+ }
+ #contact .contact-form input,
+ #contact .contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+ }
